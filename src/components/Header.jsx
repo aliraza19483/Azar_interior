@@ -1,6 +1,6 @@
-import React from "react";
-
+import React,{useState} from "react";
 function Header() {
+  const [open ,setOpen]=useState(false);
   return (
     <div className="header">
       <div className="header-logo">
@@ -21,7 +21,19 @@ function Header() {
       </div>
 
       <div className="header-icon">
-        <img src="src/assets/HeaderIcons/profile.png" alt="profile" />
+        <img src="src/assets/HeaderIcons/profile.png" alt="profile" 
+        onClick={()=>setOpen(!open)}
+        />
+        {open &&(
+          <div className="profile-dropdown">
+            <span>Home</span>
+            <span>About</span>
+            <span>Design-Idea</span>
+            <span>Contact</span>
+          </div>
+        )}
+
+
       </div>
     </div>
   );
