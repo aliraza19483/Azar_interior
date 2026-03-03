@@ -7,7 +7,7 @@ import photo5 from '../assets/images/Photo 5.jpeg';
 import photo6 from '../assets/images/photo 6.jpeg';
 import video1 from '../assets/Video/Video 1.mp4';
 import video2 from '../assets/Video/Video 2.mp4';
-import video3 from '../assets/Video/Video 4.mp4';
+import video5 from '../assets/Video/Video 5.mp4';
 
 const projects = [
   { id: 1, title: 'Royal Penthouse', category: 'Residential', image: photo1 },
@@ -62,7 +62,7 @@ const Portfolio = () => {
             gap: '32px',
             marginTop: '40px'
           }}>
-            {[video1, video2, video3].map((video, idx) => (
+            {[video1, video5].map((video, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.95 }}
